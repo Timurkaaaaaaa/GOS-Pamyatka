@@ -1,7 +1,7 @@
 from fuzzywuzzy import fuzz
 import ugolovniy_kodeks
-import administrativniy_kodeks
-import dorojniy_kodeks
+#import administrativniy_kodeks
+#import dorojniy_kodeks
 import eel
 import datetime
 
