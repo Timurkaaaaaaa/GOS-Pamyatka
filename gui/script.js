@@ -109,22 +109,35 @@ card5overlay.addEventListener("click", hideYaSvoboden);
 
 
 async function find_button() {
-  let input = document.getElementById('finder-input').value;
+    let input = document.getElementById('finder-input').value;
 
+    // Получаем результаты из Python
+    let results = await eel.choice(input)();
 
-  document.getElementById("ansver").style.display = "block";
-  let numarticle = await eel.choice(input)();
-  document.getElementById("article").innerHTML = numarticle;
+    // Очищаем предыдущие результаты
+    document.getElementById("article").innerHTML = '';
 
-  /*
-  document.getElementById("ansver2").style.display = "block";
-  let numarticle2 = await eel.choice2(input)();
-  document.getElementById("article2").innerHTML = numarticle2;
+    // Проверяем, есть ли результаты
+    if (results.length > 0) {
+        // Добавляем результаты в HTML
+        results.forEach(result => {
+            let articleDiv = document.createElement('div');
+            articleDiv.innerHTML = `
+                <p>
+                    <center><h3>${result.key} ${result.wanted}</h3></center>
+                    ${result.text}<br>
+                    <font color='#ff3300'>Наказание:</font> ${result.punishment}
+                </p>
+            `;
+            document.getElementById("article").appendChild(articleDiv);
+        });
+    } else {
+        // Если результатов нет, выводим сообщение
+        document.getElementById("article").innerHTML = '<p>Статьи не найдены</p>';
+    }
 
-  document.getElementById("ansver3").style.display = "block";
-  let numarticle3 = await eel.choice3(input)();
-  document.getElementById("article3").innerHTML = numarticle3;
-  */
+    // Показываем блок с ответом
+    document.getElementById("ansver").style.display = "block";
 }
 
 

@@ -1,99 +1,45 @@
-from fuzzywuzzy import fuzz
-import ugolovniy_kodeks
-#import administrativniy_kodeks
-#import dorojniy_kodeks
+import json
 import eel
 import datetime
 
-def find_article(query):
-    # Приводим запрос к нижнему регистру для нечеткого сравнения
-    query = query.lower()
-    
-    rc = {'query': '', 'percent': 50}
-    for c, v in ugolovniy_kodeks.VA_LIST.items():
-        for x in v:
-            vrt = fuzz.ratio(query, x)
-            if vrt > rc['percent']:
-                rc['query'] = c
-                rc['percent'] = vrt
 
-    ans = rc['query']
-    
-    return ans
+json_file_path = "Ugolovka.json"
 
-@eel.expose
-def choice(input_text: str):
-    print(input_text)
-    article = find_article(input_text)
-    print(f"Наиболее подходящая статья: {article}")
-    article_wanted = ugolovniy_kodeks.VA__LIST[article][1]
-    article_desp = ugolovniy_kodeks.VA__LIST[article][0]
-    article = str(article)
-    article = "<br>Статья " + article + " " + article_wanted + "<br>"
-    article = "<center><h3><strong>" + article + "</h3><strong></center>"
-    article = article + article_desp +"<br><br>"
-    return str(article)
+def search_in_json(search_query, json_file_path):
+    with open(json_file_path, 'r', encoding='utf-8') as file:
+        data = json.load(file)
 
+    results = []
+    # Ищем по всем текстам в JSON
+    for key, value in data.items():
+        if search_query.lower() in value['text'].lower() or search_query.lower() == key:
+            key1 = "УК " + key
+            results.append({
+                'key': key1,
+                'text': value['text'],
+                'wanted': value['wanted'],
+                'punishment': value['punishment']
+            })
 
-
-
-
-
-def find_article2(query):
-    # Приводим запрос к нижнему регистру для нечеткого сравнения
-    query = query.lower()
-    
-    rc = {'query': '', 'percent': 50}
-    for c, v in administrativniy_kodeks.VA_LIST.items():
-        for x in v:
-            vrt = fuzz.ratio(query, x)
-            if vrt > rc['percent']:
-                rc['query'] = c
-                rc['percent'] = vrt
-
-    ans = rc['query']
-    
-    return ans
+    return results
 
 @eel.expose
-def choice2(input_text: str):
-    print(input_text)
-    article = find_article2(input_text)
-    print(f"Наиболее подходящая статья: {article}")
-    article_desp = administrativniy_kodeks.VA__LIST[article][0]
-    article = "<center><h3><strong>" + article + "</h3><strong></center><br>"
-    article = article + article_desp
-    return str(article)
+def choice(search_query: str):
+    results = search_in_json(search_query, json_file_path)
+    for result in results:
+        if result['wanted']=="1":
+            result['wanted'] = "★"
+        elif result['wanted']=="2":
+            result['wanted'] = "★★"
+        elif result['wanted']=="3":
+            result['wanted'] = "★★★"
+        elif result['wanted']=="4":
+            result['wanted'] = "★★★★"
+        elif result['wanted']=="5":
+            result['wanted'] = "★★★★★"
+    return results
 
 
-
-
-
-def find_article3(query):
-    # Приводим запрос к нижнему регистру для нечеткого сравнения
-    query = query.lower()
-    
-    rc = {'query': '', 'percent': 50}
-    for c, v in dorojniy_kodeks.VA_LIST.items():
-        for x in v:
-            vrt = fuzz.ratio(query, x)
-            if vrt > rc['percent']:
-                rc['query'] = c
-                rc['percent'] = vrt
-
-    ans = rc['query']
-    
-    return ans
-
-@eel.expose
-def choice3(input_text: str):
-    print(input_text)
-    article = find_article3(input_text)
-    print(f"Наиболее подходящая статья: {article}")
-    article_desp = dorojniy_kodeks.VA__LIST[article][0]
-    article = "<center><h3><strong>" + article + "</h3><strong></center><br>"
-    article = article + article_desp
-    return str(article)
 
 
 eel.init('gui')
