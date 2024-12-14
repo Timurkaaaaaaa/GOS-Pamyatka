@@ -12,7 +12,7 @@ def search_in_json(search_query, json_file_path):
     results = []
     # Ищем по всем текстам в JSON
     for key, value in data.items():
-        if search_query.lower() in value['text'].lower():  # Поиск без учета регистра
+        if search_query.lower() in value['text'].lower() or search_query.lower() in key:  # Поиск без учета регистра
             results.append({
                 'key': key,
                 'text': value['text'],
@@ -25,6 +25,17 @@ def search_in_json(search_query, json_file_path):
 @eel.expose
 def choice(search_query: str):
     results = search_in_json(search_query, json_file_path)
+    for result in results:
+        if result['wanted']=="1":
+            result['wanted'] = "★"
+        elif result['wanted']=="2":
+            result['wanted'] = "★★"
+        elif result['wanted']=="3":
+            result['wanted'] = "★★★"
+        elif result['wanted']=="4":
+            result['wanted'] = "★★★★"
+        elif result['wanted']=="5":
+            result['wanted'] = "★★★★★"
     return results
 
 
