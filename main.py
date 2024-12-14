@@ -12,9 +12,10 @@ def search_in_json(search_query, json_file_path):
     results = []
     # Ищем по всем текстам в JSON
     for key, value in data.items():
-        if search_query.lower() in value['text'].lower() or search_query.lower() in key:  # Поиск без учета регистра
+        if search_query.lower() in value['text'].lower() or search_query.lower() == key:
+            key1 = "УК " + key
             results.append({
-                'key': key,
+                'key': key1,
                 'text': value['text'],
                 'wanted': value['wanted'],
                 'punishment': value['punishment']
