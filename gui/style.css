@@ -124,7 +124,7 @@ html {
 }
 
 
-#tencodes-overlay, #urisdicia-overlay, #sila-overlay, #process-overlay, #yasvoboden-overlay {
+#tencodes-overlay, #urisdicia-overlay, #sila-overlay, #process-overlay, #yasvoboden-overlay, #update-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -134,7 +134,7 @@ html {
   display: none;
 }
 
-#tencodes, #urisdicia, #sila, #process, #yasvoboden {
+#tencodes, #urisdicia, #sila, #process, #yasvoboden, #update {
   position: absolute;
 	width: 70%;
   top: 50%;
