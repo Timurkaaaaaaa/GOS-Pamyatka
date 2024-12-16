@@ -140,7 +140,28 @@ async function find_button() {
     document.getElementById("ansver").style.display = "block";
 }
 
+const card6overlay = document.getElementById("update-overlay");
+const card6 = document.getElementById("update");
 
+function showUpdate() {
+  card6.style.display = "block";
+  card6overlay.style.display = "block";
+}
+function hideUpdate() {
+  card6.style.display = "none";
+  card6overlay.style.display = "none";
+}
+card6overlay.addEventListener("click", hideUpdate);
 
+async function check_for_updates() {
+    let result = await eel.check_for_updates()();
+    if( result == 0 ) {
+        pass;
+    }
+    else {
+        showUpdate();
+    }
+}
 
+check_for_updates()
 setbackground()
