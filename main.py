@@ -5,17 +5,34 @@ import requests
 
 @eel.expose
 def check_for_updates():
-    version = "1.3"
+    version = "1.4"
     url = "https://raw.githubusercontent.com/Timurkaaaaaaa/GOS-Pamyatka/refs/heads/main/version.json"
     response = requests.get(url)
 
     if response.status_code == 200:
         json_data = response.json()
-        print(json_data['version'])
         if json_data['version'] != version:
             return -1
         else:
             return 0
+
+@eel.expose
+def get_version():
+    url = "https://raw.githubusercontent.com/Timurkaaaaaaa/GOS-Pamyatka/refs/heads/main/version.json"
+    response = requests.get(url)
+    json_data = response.json()
+    print(json_data["version"])
+    a = "Последняя версия: " + json_data["version"]
+    return a
+
+@eel.expose
+def get_update_info():
+    url = "https://raw.githubusercontent.com/Timurkaaaaaaa/GOS-Pamyatka/refs/heads/main/version.json"
+    response = requests.get(url)
+    json_data = response.json()
+    print(json_data["update-info"])
+    a = "Информация: " + json_data["update-info"]
+    return a
 
 def search_in_json1(search_query):
     with open("Ugolovka.json", 'r', encoding='utf-8') as file:
