@@ -159,6 +159,10 @@ async function check_for_updates() {
         pass;
     }
     else {
+        let showVersion = document.getElementById('version');
+        let showInfo = document.getElementById('updateInfo');
+        showVersion.textContent = await eel.get_version()();
+        showInfo.textContent = await eel.get_update_info()();
         showUpdate();
     }
 }
