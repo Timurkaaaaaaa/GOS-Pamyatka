@@ -5,7 +5,7 @@ import requests
 
 @eel.expose
 def check_for_updates():
-    version = "1.4"
+    version = "1.5"
     url = "https://raw.githubusercontent.com/Timurkaaaaaaa/GOS-Pamyatka/refs/heads/main/version.json"
     response = requests.get(url)
 
@@ -35,7 +35,7 @@ def get_update_info():
     return a
 
 def search_in_json1(search_query):
-    with open("Ugolovka.json", 'r', encoding='utf-8') as file:
+    with open("Criminal-Code.json", 'r', encoding='utf-8') as file:
         data = json.load(file)
 
     results = []
@@ -66,7 +66,7 @@ def search_in_json1(search_query):
     return results
 
 def search_in_json2(search_query):
-    with open("Administrativka.json", 'r', encoding='utf-8') as file:
+    with open("Administrative-Code.json", 'r', encoding='utf-8') as file:
         data = json.load(file)
 
     results = []
@@ -83,7 +83,7 @@ def search_in_json2(search_query):
     return results
 
 def search_in_json3(search_query):
-    with open("Dorojka.json", 'r', encoding='utf-8') as file:
+    with open("Road-Code.json", 'r', encoding='utf-8') as file:
         data = json.load(file)
 
     results = []
