@@ -22,7 +22,7 @@ def get_version():
     response = requests.get(url)
     json_data = response.json()
     print(json_data["version"])
-    a = "Последняя версия: " + json_data["version"]
+    a = "Last version: " + json_data["version"]
     return a
 
 @eel.expose
@@ -31,7 +31,7 @@ def get_update_info():
     response = requests.get(url)
     json_data = response.json()
     print(json_data["update-info"])
-    a = "Информация: " + json_data["update-info"]
+    a = "Update information: " + json_data["update-info"]
     return a
 
 def search_in_json1(search_query):
@@ -43,7 +43,7 @@ def search_in_json1(search_query):
     for key, value in data.items():
         if search_query.lower() in value['text'].lower() or search_query.lower() in key:
             print(key)
-            key1 = "УК " + key
+            key1 = "Criminal Code " + key
             results.append({
                 'key': key1,
                 'text': value['text'],
@@ -82,7 +82,7 @@ def search_in_json2(search_query):
     results = []
     for key, value in data.items():
         if search_query.lower() in value['text'].lower() or search_query.lower() in key:
-            key1 = "АК " + key
+            key1 = "Administrative Сode " + key
             results.append({
                 'key': key1,
                 'text': value['text'],
@@ -99,7 +99,7 @@ def search_in_json3(search_query):
     results = []
     for key, value in data.items():
         if search_query.lower() in value['text'].lower() or search_query.lower() in (key + "ДК"):
-            key1 = "ДК " + key
+            key1 = "Road Code " + key
             results.append({
                 'key': key1,
                 'text': value['text'],
