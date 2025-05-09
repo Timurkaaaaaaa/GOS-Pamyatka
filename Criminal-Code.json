@@ -1,0 +1,17 @@
+{
+    "1.1": {
+        "text": "Murder",
+        "wanted": "3",
+        "punishment": "15 years imprisonment"
+    },
+    "1.2": {
+        "text": "Capital murder",
+        "wanted": "4",
+        "punishment": "20 years imprisonment"
+    },
+    "1.3": {
+        "text": "Robbery",
+        "wanted": "2",
+        "punishment": "5 years imprisonment"
+    }
+}

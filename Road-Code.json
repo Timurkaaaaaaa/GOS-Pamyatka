@@ -1,0 +1,14 @@
+{
+    "1": {
+        "text": "Drunk driving",
+        "punishment": "$10,000 fine and license suspension"
+    },
+    "2": {
+        "text": "Driving through a red light",
+        "punishment": "Fine 1000$"
+    },
+    "3": {
+        "text": "Speeding",
+        "punishment": "Fine 5000$"
+    }
+}
