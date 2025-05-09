@@ -17,8 +17,8 @@ A program that helps employees of state structures of the RP servers
 
 ## 💻 Installation:
 1. Select the desired release.
-2. Install ```interactive-reminder.exe```
-3. Start ```interactive-reminder.exe```
+2. Install ```setup.exe```
+3. Start ```setup.exe```
 4. After installing the program, launch it and use it.
 
 ## 🛠 Functional:
