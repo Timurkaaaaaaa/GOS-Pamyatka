@@ -3,42 +3,42 @@
 </p>
 
 <p align="center">
-       Интерактивная памятка по Законодательной Базе
+       Interactive memo
 </p>
 
 <p align="center">
    <img src="https://img.shields.io/badge/Language-Python-yellow">
-   <img src="https://img.shields.io/badge/Version-v1.4-blue">
+   <img src="https://img.shields.io/badge/Version-v1.5-blue">
    <img src="https://img.shields.io/badge/License-MIT-red">
 </p>
 
-## 💡 О проекте
-Программа, помогающая сотрудникам государтсвенных структур РП сервера Majestic RP Wasington
+## 💡 About:
+A program that helps employees of state structures of the RP servers
 
-## 💻 Установка
-1. Выберите нужный релиз.
-2. Скачайте ```interactive-reminder.exe```
-3. Запускайте ```interactive-reminder.exe```
-4. После установки программы запускайте её и пользуйтесь
+## 💻 Installation:
+1. Select the desired release.
+2. Install ```setup.exe```
+3. Start ```setup.exe```
+4. After installing the program, launch it and use it.
 
-## 🛠 Функционал:
-- Поиск статей Уголовного Кодекса
-- Поиск статей Административного Кодекса
-- Поиск статей Дорожного Кодекса
-- Просмотр Тен-Кодов
-- Карта юрисдикции
-- Стадии применения силы
-- Процессуальный кодекс:
- - Процесс задержания
- - Процесс ареста
- - Основания для задержания
- - Основания для освобождения
+## 🛠 Functional:
+- Search for articles of the Criminal Code
+- Search for articles of the Administrative Code
+- Search for articles of the Road Code
+- View Ten-Codes
+- Jurisdiction map
+- Stages of the use of force
+- Procedural code:
+ - Detention process
+ - Arrest process
+ - Grounds for detention
+ - Grounds for release
 
-## 😀 Разработчики
+## 😀 Developers
 - [Timurkaaa](https://github.com/Timurkaaaaaaa)
 
-## 🧾 Лицензия
+## 🧾 License
 - MIT License
 
-## 📎 Ссылки
+## 📎 Links
 - [Icon](https://icons8.ru/icon/42817/информация)

@@ -14,7 +14,7 @@ async function setbackground()
   {
     const html = document.getElementById("html");
     html.style.setProperty("background-image", "url(background.jpg)");
-    document.getElementById("helloword").textContent = "Добрый вечер!";
+    document.getElementById("helloword").textContent = "Good evening!";
   }
 }
 
@@ -111,32 +111,26 @@ card5overlay.addEventListener("click", hideYaSvoboden);
 async function find_button() {
     let input = document.getElementById('finder-input').value;
 
-    // Получаем результаты из Python
     let results = await eel.choice(input)();
 
-    // Очищаем предыдущие результаты
     document.getElementById("article").innerHTML = '';
 
-    // Проверяем, есть ли результаты
     if (results.length > 0) {
-        // Добавляем результаты в HTML
         results.forEach(result => {
             let articleDiv = document.createElement('div');
             articleDiv.innerHTML = `
                 <p>
                     <center><h3>${result.key} ${result.wanted}</h3></center>
                     ${result.text}<br>
-                    <font color='#ff3300'>Наказание:</font> ${result.punishment}
+                    <font color='#ff3300'>Punishment:</font> ${result.punishment}
                 </p>
             `;
             document.getElementById("article").appendChild(articleDiv);
         });
     } else {
-        // Если результатов нет, выводим сообщение
-        document.getElementById("article").innerHTML = '<p>Статьи не найдены</p>';
+        document.getElementById("article").innerHTML = '<p>No articles found</p>';
     }
 
-    // Показываем блок с ответом
     document.getElementById("ansver").style.display = "block";
 }
 

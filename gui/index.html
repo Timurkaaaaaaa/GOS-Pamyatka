@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html id='html'>
 	<head>
-		<title>Памятка</title>
+		<title>Interactive memo</title>
 		<script type="text/javascript" src="/eel.js"></script>
 		<link href="style.css" rel="stylesheet" type="text/css"/>
 		<link rel="icon" href="icon.png" type="image/png">
@@ -10,17 +10,17 @@
 	<body id='main'>
 		<center>
 			<div id='Hello'>
-				<h1>Памятка гос. структур</h1>
-				<b id='helloword'>Добрый день!</b>
+				<h1>Interactive memo</h1>
+				<b id='helloword'>Good afternoon!</b>
 			</div>
 			<div id='finder'>
-				<input class="finder-input" id="finder-input" type='text' placeholder="Поиск по статье / описанию / названию", value="">
-				<button onclick='find_button()' id='find'>Найти</button>
+				<input class="finder-input" id="finder-input" type='text' placeholder="Search by article / description / title", value="">
+				<button onclick='find_button()' id='find'>Search</button>
 			</div>
 		</center>
 		<center>
 			<div id='ansver'>
-				<p id='article'>Статья не найдена</p>
+				<p id='article'>Article not found</p>
 			</div>
 			<div id='ansver2'>
 				<p id='article2' style='margin-left: 20px; margin-right: 20px; margin-top: 20px;margin-bottom: 20px;'>Статья не найдена</p>
@@ -31,95 +31,95 @@
 		</center>
 		<center>
 			<div id='cards'>
-				<button onclick="showTencodes()" id='card'>Тен-коды</button>
-				<button onclick="showUrisdicia()" id='card'>Юрисдикция</button>
-				<button onclick="showSila()" id='card'>Применение силы</button>
-				<button onclick="showProcess()" id='card'>Задержание</button>
-				<button onclick="showYaSvoboden()" id='card'>Освобождение</button>
+				<button onclick="showTencodes()" id='card'>Ten-Codes</button>
+				<button onclick="showUrisdicia()" id='card'>Jurisdiction</button>
+				<button onclick="showSila()" id='card'>Use of force</button>
+				<button onclick="showProcess()" id='card'>Detention</button>
+				<button onclick="showYaSvoboden()" id='card'>Liberation</button>
 			</div>
 		</center>
 			<div id="update-overlay">
 				<div id="update">
 					<center>
-						<h2>Присутствует новая версия!</h2>
-						<p id="version">Версия: </p>
-						<p id="updateInfo">Информация об обновлении:</p>
+						<h2>A new version has appeared!</h2>
+						<p id="version">Version: </p>
+						<p id="updateInfo">Update information:</p>
 						<br>
-						<p>Новая версия доступна в нашем
-							<a href="https://github.com/Timurkaaaaaaa/GOS-Pamyatka/tree/main">GitHub репозитории</a>
+						<p>The new version is available in our 
+							<a href="https://github.com/Timurkaaaaaaa/GOS-Pamyatka/tree/main">GitHub repository</a>
 						</p>
 						<br>
-						<button id="exitpopup" onclick="hideUpdate()">Закрыть окно</button>
+						<button id="exitpopup" onclick="hideUpdate()">Close</button>
 					</center>
 				</div>
 			</div>
 
 			<div id="tencodes-overlay">
 				<div id="tencodes">
-					<center><h1>Тен-коды:</h1></center>
+					<center><h1>Ten-Codes:</h1></center>
 					<div class='row' style='width: 100%;'>
 						<div id='section1'>
-							<strong>CODE 0: </strong> Офицер ранен/убит <br>
-							<strong>CODE 1: </strong> По офицерам открыт огонь <br>
-							<strong>CODE 2: </strong> Мало приоритетный вызов <br>
-							<strong>CODE 3: </strong> Высоко приоритетный вызов <br>
-							<strong>CODE 4: </strong> Ситуация урегулирована <br>
-							<strong>CODE 5: </strong> Ложная тревога <br>
-							<strong>CODE 6: </strong> Массовые беспорядки <br>
-							<strong>CODE 7: </strong> Скопление вооруженных людей <br>
-							<strong>CODE 8: </strong> Похищение/попытка похищения <br>
-							<strong>CODE 9: </strong> Рядом угнанное т/с <br><br>
-							<strong>10-0: </strong> Отмена <br>
-							<strong>10-3: </strong> Радиомолчание <br>
-							<strong>10-4: </strong> Сообщение принял (Так точно) <br>
-							<strong>10-5: </strong> Ретранслируйте Ваше сообщение <br>
-							<strong>10-6: </strong> Не принято <br>
-							<strong>10-7: </strong> Ожидайте <br>
-							<strong>10-20: </strong> Местоположение… <br>
-							<strong>10-22: </strong> Сообщите также… <br>
-							<strong>10-23: </strong> На месте… <br>
-							<strong>10-24: </strong> Последнее задание выполнено <br>
-							<strong>10-25: </strong> Вы можете связаться с …? <br>
-							<strong>10-26: </strong> Последняя информация отменяется <br>
-							<strong>10-28: </strong> Какой ваш позывной? <br>
-							<strong>10-30: </strong> Это не разрешается правилами связи <br>
-							<strong>10-31: </strong> Следую в место… <br>
-							<strong>10-32: </strong> Даю вам контроль… <br><br>
+							<strong>CODE 0: </strong> Officer wounded/killed <br>
+							<strong>CODE 1: </strong> Officers were fired upon <br>
+							<strong>CODE 2: </strong> Low priority call <br>
+							<strong>CODE 3: </strong> High priority call <br>
+							<strong>C	ODE 4: </strong> The situation has been resolved <br>
+							<strong>CODE 5: </strong> False alarm <br>
+							<strong>CODE 6: </strong> Riots <br>
+							<strong>CODE 7: </strong> A gathering of armed men <br>
+							<strong>CODE 8: </strong> Kidnapping/Attempt to kidnap <br>
+							<strong>CODE 9: </strong> Stolen vehicle nearby <br><br>
+							<strong>10-0: </strong> Cancel <br>
+							<strong>10-3: </strong> Radio silence <br>
+							<strong>10-4: </strong> Message received (Yes sir) <br>
+							<strong>10-5: </strong> Retransmit your message <br>
+							<strong>10-6: </strong> Not received <br>
+							<strong>10-7: </strong> Wait <br>
+							<strong>10-20: </strong> Location… <br>
+							<strong>10-22: </strong> Please also report… <br>
+							<strong>10-23: </strong> On location… <br>
+							<strong>10-24: </strong> Last mission accomplished <br>
+							<strong>10-25: </strong> Can you contact…? <br>
+							<strong>10-26: </strong> Last information cancelled <br>
+							<strong>10-28: </strong> What is your call sign? <br>
+							<strong>10-30: </strong> This is not permitted by the communication rules <br>
+							<strong>10-31: </strong> Proceeding to location… <br>
+							<strong>10-32: </strong> Giving you control… <br><br>
 						</div>
 						<div id='section2'>
-							<strong>10-33: </strong> Сообщение о происшествии бедствии…; <br>
-							<strong>10-35: </strong> Конфиденциальная информация; <br>
-							<strong>10-37: </strong> Нужна техпомощь; <br>
-							<strong>10-38: </strong> Нужна «скорая помощь»; <br>
-							<strong>10-39: </strong> Ваше сообщение передано; <br>
-							<strong>10-40: </strong> Разрешите нарушить Юрисдикцию <br>
-							<strong>10-41: </strong> Покинули Вашу Юрисдикцию <br>
-							<strong>10-48: </strong> Эвакуация <br>
-							<strong>10-50: </strong> [Позывной] Запрашивает разрешение на взлёт
+							<strong>10-33: </strong> Reporting a distress incident…; <br>
+							<strong>10-35: </strong> Confidential information; <br>
+							<strong>10-37: </strong> Need technical assistance; <br>
+							<strong>10-38: </strong> Need an ambulance; <br>
+							<strong>10-39: </strong> Your message has been transmitted; <br>
+							<strong>10-40: </strong> Permission to violate Jurisdiction <br>
+							<strong>10-41: </strong> Have left your Jurisdiction <br>
+							<strong>10-48: </strong> Evacuation <br>
+							<strong>10-50: </strong> [Callsign] Requesting permission to take off
 							<br>
-							<strong>10-51: </strong> [Позывной] Входит в воздушное пространство штата <br>
-							<strong>10-55: </strong> [Позывной] Покидает в воздушное пространство штата <br>
-							<strong>10-59: </strong> [Позывной] Запрашивает разрешение на посадку <br>
-							<strong>10-65: </strong> Жду вашего следующего сообщения/задания; <br>
-							<strong>10-67: </strong> Подозреваемый задержан; <br>
-							<strong>10-73: </strong> Пешая погоня; <br>
-							<strong>10-74: </strong> Отрицательно; <br>
-							<strong>10-75: </strong> Вы создаете помехи; <br>
-							<strong>10-76: </strong> Время прибытия;
+							<strong>10-51: </strong> [Callsign] Entering state airspace <br>
+							<strong>10-55: </strong> [Callsign] Leaving state airspace <br>
+							<strong>10-59: </strong> [Callsign] Requesting permission to land <br>
+							<strong>10-65: </strong> Awaiting your next message/task; <br>
+							<strong>10-67: </strong> Suspect in custody; <br>
+							<strong>10-73: </strong> Foot pursuit; <br>
+							<strong>10-74: </strong> Negative; <br>
+							<strong>10-75: </strong> You are causing interference; <br>
+							<strong>10-76: </strong> ETA;
 							<br>
-							<strong>10-80: </strong> Идет преследование - погоня; <br>
-							<strong>10-83: </strong> Дополнительный офицер (нужно подкрепление); <br>
-							<strong>10-99: </strong> Ситуация урегулирована; <br>
-							<strong>10-100: </strong> Мне нужно отойти; <br>
-							<strong>10-101: </strong> Какое состояние(Вы в безопасности?); <br>
-							<strong>10-106: </strong> Я в безопасности (Кто либо другой в безопасности); <br>
-							<strong>10-200: </strong> Нужна полиция в… <br>
+							<strong>10-80: </strong> Pursuit in progress - chase; <br>
+							<strong>10-83: </strong> Additional officer (need backup); <br>
+							<strong>10-99: </strong> Situation resolved; <br>
+							<strong>10-100: </strong> I need to move; <br>
+							<strong>10-101: </strong> What is the status (Are you safe?); <br>
+							<strong>10-106: </strong> I am safe (Anyone else is safe); <br>
+							<strong>10-200: </strong> Police needed at… <br>
 							<br>
 						</div>
 						<br>
 					</div>
 					<center>
-						<button id="exitpopup" onclick="hideTencodes()">Закрыть окно</button>
+						<button id="exitpopup" onclick="hideTencodes()">Close</button>
 					</center>
 				</div>
 			</div>
@@ -127,23 +127,23 @@
 		<div id="urisdicia-overlay">
 			<div id="urisdicia">
 				<center>
-					<h1>Юрисдикция:</h1>
+					<h1>Jurisdiction:</h1>
 				</center>
 				<div class='row' style='width: 100%;'>
 					<div id='section1'>
-						<p>Окружная юрисдикция помечена красным цветом, принадлежит LSCSD, SANG.</p>
-						<p>Городская юрисдикция помечена синим цветом и принадлежит LSPD, USSS.</p>
-						<p>FIB при исполнении своих должностных обязанностей, вправе действовать на всей территории штата.</p>
-						<p>Право на нарушение юрисдикции вправе выдать Федеральное Бюро, в случае игнорирование департамента, в чью зону осуществляется проезд.</p>
-						<p>Сотрудникам разрешено нарушать юрисдикцию после 21:59 и до 12:00.</p>
-						<p>Сотрудники вправе не запрашивать разрешение на въезд в чужую юрисдикцию, если осуществляется военная поставка или рейдовая операция.</p>
+						<p>District jurisdiction marked in red belongs to LSCSD, SANG.</p>
+						<p>The city jurisdiction is marked in blue and belongs to LSPD, USSS, USMS.</p>
+						<p>The FIB, in the performance of its official duties, has the right to operate throughout the territory of the state..</p>
+						<p>The FIB has the right to issue a citation for violation of jurisdiction in the event of ignoring the department into whose zone the passage is carried out.</p>
+						<p>Employees are allowed to violate jurisdiction after 10:00 PM and before 12:00 AM.</p>
+						<p>Employees have the right not to request permission to enter another jurisdiction if a military supply or raid operation is being carried out.</p>
 					</div>
 					<div id='section2'>
-						<img src='urisdicia.png' style='width: 75%;'></imп>
+						<img src='Jurisdiction.png' style='width: 75%;'></imп>
 					</div>
 				</div>
 				<center>
-					<button id="exitpopup" onclick="hideUrisdicia()">Закрыть окно</button>
+					<button id="exitpopup" onclick="hideUrisdicia()">Close</button>
 				</center>
 			</div>
 		</div>
@@ -151,13 +151,13 @@
 		<div id="sila-overlay">
 			<div id="sila">
 				<center>
-					<h1>Стадии применения силы:</h1>
-				<p>• Присутствие </p>
-				<p>• Требования, приказы </p>
-				<p>• Применение физической силы </p>
-				<p>• Применение специальных средств </p>
-				<p>• Применение летального оружия </p>
-					<button id="exitpopup" onclick="hideUrisdicia()">Закрыть окно</button>
+					<h1>Stages of the use of force:</h1>
+				<p>• Presence </p>
+				<p>• Requirements, orders </p>
+				<p>• Use of physical force </p>
+				<p>• Use of special means (electric shocker, baton, etc.) </p>
+				<p>• Use of lethal weapons </p>
+					<button id="exitpopup" onclick="hideUrisdicia()">Close</button>
 				</center>
 			</div>
 		</div>
@@ -165,41 +165,40 @@
 		<div id="process-overlay">
 			<div id="process">
 				<center>
-					<h1>Процесс задержания:</h1>
+					<h1>Detention process:</h1>
 				</center>
 				<div class='row' style='width: 100%;'>
 					<div id='section1'>
-						<h2>Задержание:</h2>
-						<p> • Надеть наручники на подозреваемого </p>
-						<p> • Идентифицировать себя </p>
-						<p> • Первичный обыск </p>
-						<p> • Разъясненить причину задержания </p>
-						<p> • Миранла </p>
-						<p> • Доставить в КПЗ/Допросную </p>
-						<p> • Идентифицировать личность задержанного </p>
-						<p> • Проверить принадлежность к гос. органам </p>
-						<p> • Реализация прав. В случае если задержанный является гос.служащим, вызвать начальство и прокуратуру </p>
-						<p> • Следственные действия(допрос, экспертиза и т.д.) если есть необходимость</p>
-						<p> • Арестовать </p>
+						<h2>Detention:</h2>
+						<p> • Put handcuffs on the suspect </p>
+						<p> • Identify yourself </p>
+						<p> • Initial search </p>
+						<p> • Explain the reason for the detention </p>
+						<p> • Read the Miranda Rule </p>
+						<p> • Deliver to interrogation room </p>
+						<p> • Identify the detainee </p>
+						<p> • Check affiliation with government agencies </p>
+						<p> • Realization of rights. If the detainee is a civil servant, call the authorities and the prosecutor's office </p>
+						<p> • Investigative actions (interrogation, examination, etc.) if necessary</p>
+						<p> • Arrest </p>
 					</div>
 					<div id='section2'>
-						<h2>Арест:</h2>
-						<p> • Вторичный обыск </p>
-						<p> • Изъятие нелегальных предметов </p>
-						<p> • Обновить приоритет розыска </p>
-						<p> • Разъяснить причину ареста при необходимости </p>
-						<p> • Поместить в камеру </p>
-						<h2>Основание для задержания:</h2>
-						<p> • Лицо застигнуто в момент совершения преступления</p>
-						<p> • На одежде явные следы престпления</p>
-						<p> • Имеется фото-/видео- фиксация нарушений</p>
-						<p> • Имеется документ, предписывающий задержание</p>
-						<p> • Имеется ориентировка на т/с или данное лицо</p>
-						<p> • Лицо находиться в базе данных</p>
+						<h2>Arrest:</h2>
+						<p> • Secondary search </p>
+						<p> • Seizure of illegal items </p>
+						<p> • Update search priority </p>
+						<p> • Explain the reason for the arrest if necessary </p>
+						<p> • Place in camera </p>
+						<h2>Reason for detention:</h2>
+						<p> • The person was caught in the act of committing a crime</p>
+						<p> • There are clear signs of a crime on the clothes.</p>
+						<p> • There is photo/video recording of violations</p>
+						<p> • There is a document ordering detention</p>
+						<p> • The person is wanted</p>
 					</div>
 				</div>
 				<center>
-					<button id="exitpopup" onclick="hideUrisdicia()">Закрыть окно</button>
+					<button id="exitpopup" onclick="hideUrisdicia()">Close</button>
 				</center>
 			</div>
 		</div>
@@ -207,12 +206,12 @@
 		<div id="yasvoboden-overlay">
 			<div id="yasvoboden">
 				<center>
-					<h1>Основания для освобождения:</h1>
-					<p>• Не подтвердилось подозрение в совершении преступления </p>
-					<p>• За нарушение не предусмотрено меры наказания в виде лишения свободы </p>
-					<p>• Нет оснований для задержания </p>
-					<p>• Задержание длиться более 60 минут </p>
-					<button id="exitpopup" onclick="hideYaSvoboden()">Закрыть окно</button>
+					<h1>Grounds for release:</h1>
+					<p>• The suspicion of committing a crime was not confirmed </p>
+					<p>• There is no penalty in the form of imprisonment for the violation. </p>
+					<p>• There are no grounds for detention </p>
+					<p>• The detention lasts more than 60 minutes </p>
+					<button id="exitpopup" onclick="hideYaSvoboden()">Close</button>
 				</center>
 			</div>
 		</div>
