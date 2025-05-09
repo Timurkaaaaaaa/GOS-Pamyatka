@@ -62,6 +62,16 @@ def search_in_json1(search_query):
             result['wanted'] = "★★★★"
         elif result['wanted']=="5":
             result['wanted'] = "★★★★★"
+        elif result['wanted']=="6":
+            result['wanted'] = "★★★★★★"
+        elif result['wanted']=="7":
+            result['wanted'] = "★★★★★★★"
+        elif result['wanted']=="8":
+            result['wanted'] = "★★★★★★★★"
+        elif result['wanted']=="9":
+            result['wanted'] = "★★★★★★★★★"
+        elif result['wanted']=="10":
+            result['wanted'] = "★★★★★★★★★★"
 
     return results
 
